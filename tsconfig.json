@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+
+    "resolveJsonModule": true,
+
+    "paths": {
+      "@taskforge/mcp-server": ["./apps/mcp-server/src"],
+      "@taskforge/worker": ["./apps/worker/src"],
+      "@taskforge/agent-core": ["./packages/agent-core/src"],
+      "@taskforge/jira-client": ["./packages/jira-client/src"],
+      "@taskforge/github-client": ["./packages/github-client/src"],
+      "@taskforge/shared": ["./packages/shared/src"]
+    },
+
+    "strict": true,
+    "skipLibCheck": true
+  },
+
+  "exclude": ["node_modules", "dist"]
+}

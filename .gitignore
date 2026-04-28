@@ -1,0 +1,8 @@
+node_modules
+.working-repo
+.DS_Store
+.env
+.env.database
+init.sql
+dist/
+.claude

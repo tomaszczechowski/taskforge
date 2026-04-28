@@ -1,0 +1,39 @@
+<svg viewBox="0 0 340 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="340" height="80" fill="#ffffff" rx="8"/>
+
+  <!-- Icon: Gear with lightning bolt -->
+  <g transform="translate(40, 40)">
+    <!-- Gear teeth (8 spokes) -->
+    <g stroke="#9F7AEA" stroke-width="3" stroke-linecap="round">
+      <line x1="0" y1="-18" x2="0" y2="-26"/>
+      <line x1="12.73" y1="-12.73" x2="18.38" y2="-18.38"/>
+      <line x1="18" y1="0" x2="26" y2="0"/>
+      <line x1="12.73" y1="12.73" x2="18.38" y2="18.38"/>
+      <line x1="0" y1="18" x2="0" y2="26"/>
+      <line x1="-12.73" y1="12.73" x2="-18.38" y2="18.38"/>
+      <line x1="-18" y1="0" x2="-26" y2="0"/>
+      <line x1="-12.73" y1="-12.73" x2="-18.38" y2="-18.38"/>
+    </g>
+
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="16" fill="none" stroke="#9F7AEA" stroke-width="2"/>
+
+    <!-- Inner filled circle -->
+    <circle cx="0" cy="0" r="12" fill="#9F7AEA"/>
+
+    <!-- Lightning bolt -->
+    <polygon points="1,-7 5,-1 1,0 3,7 -3,1 1,0 -2,-1" fill="#ffffff"/>
+  </g>
+
+  <!-- Text: Taskforge -->
+  <text
+    x="82"
+    y="52"
+    font-family="Arial Black, Arial, sans-serif"
+    font-size="40"
+    font-weight="900"
+    fill="#1a1a2e"
+    letter-spacing="-1"
+  >Task<tspan fill="#9F7AEA">forge</tspan></text>
+</svg>

@@ -1,0 +1,28 @@
+{
+    "name": "@taskforge/mcp-server",
+    "version": "0.1.0",
+    "description": "HTTP middleware server exposing Jira and GitHub tools to the Taskforge agent worker.",
+    "author": "Tomasz Czechowski <tomasz@czechowski.pl>",
+    "license": "Apache-2.0",
+    "type": "module",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsx src/index.ts"
+    },
+    "dependencies": {
+        "@anthropic-ai/claude-code": "^2.1.0",
+        "@anthropic-ai/sdk": "^0.39.0",
+        "@taskforge/github-client": "workspace:*",
+        "@taskforge/jira-client": "workspace:*",
+        "@taskforge/shared": "workspace:*",
+        "body-parser": "^1.20.2"
+    },
+    "devDependencies": {
+        "@types/body-parser": "^1.19.6",
+        "@types/node": "^20.11.0",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.4.0"
+    }
+}

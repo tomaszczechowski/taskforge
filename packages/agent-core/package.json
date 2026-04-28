@@ -1,0 +1,24 @@
+{
+    "name": "@taskforge/agent-core",
+    "version": "0.1.0",
+    "description": "Claude API agentic loop for plan generation, spec summarisation, and code implementation with git operations.",
+    "author": "Tomasz Czechowski <tomasz@czechowski.pl>",
+    "license": "Apache-2.0",
+    "type": "module",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsx src/index.ts"
+    },
+    "dependencies": {
+        "@taskforge/shared": "workspace:*",
+        "@anthropic-ai/sdk": "^0.39.0",
+        "@anthropic-ai/claude-code": "^2.1.0"
+    },
+    "devDependencies": {
+        "typescript": "^5.4.0",
+        "ts-node": "^10.9.2",
+        "@types/node": "^20.11.0"
+    }
+}

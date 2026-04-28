@@ -1,0 +1,23 @@
+{
+    "name": "@taskforge/shared",
+    "version": "0.1.0",
+    "description": "Shared types, ADF utilities, and logger used across the Taskforge monorepo.",
+    "author": "Tomasz Czechowski <tomasz@czechowski.pl>",
+    "license": "Apache-2.0",
+    "type": "module",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsx src/index.ts"
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.0",
+        "@types/winston": "^2.4.4",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.4.0"
+    },
+    "dependencies": {
+        "winston": "^3.19.0"
+    }
+}

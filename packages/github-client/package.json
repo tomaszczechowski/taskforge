@@ -1,0 +1,23 @@
+{
+    "name": "@taskforge/github-client",
+    "version": "0.1.0",
+    "description": "GitHub API client for branch and pull request management used by the Taskforge agent.",
+    "author": "Tomasz Czechowski <tomasz@czechowski.pl>",
+    "license": "Apache-2.0",
+    "type": "module",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsx src/index.ts"
+    },
+    "dependencies": {
+        "@taskforge/shared": "workspace:*",
+        "@octokit/rest": "^20.0.0"
+    },
+    "devDependencies": {
+        "typescript": "^5.4.0",
+        "ts-node": "^10.9.2",
+        "@types/node": "^20.11.0"
+    }
+}

@@ -40,13 +40,13 @@ The agent polls Jira on a configurable interval. Every step goes through a human
 Install globally from npm:
 
 ```bash
-npm install -g taskforge
+npm install -g @taskforge-ai/cli
 ```
 
 Or run any command without installing via `npx`:
 
 ```bash
-npx taskforge <command>
+npx @taskforge-ai/cli <command>
 ```
 
 ---
@@ -54,7 +54,7 @@ npx taskforge <command>
 ## Quickstart
 
 ```bash
-npx taskforge init
+npx @taskforge-ai/cli init
 ```
 
 This runs an interactive setup wizard that creates `taskforge.config.json` and `.env` in your project directory.
@@ -64,30 +64,30 @@ This runs an interactive setup wizard that creates `taskforge.config.json` and `
 Then start both services:
 
 ```bash
-npx taskforge mcp start
-npx taskforge start
+npx @taskforge-ai/cli mcp start
+npx @taskforge-ai/cli start
 ```
 
 ---
 
 ## CLI Reference
 
-### `npx taskforge init`
+### `npx @taskforge-ai/cli init`
 
 Interactive setup wizard. Creates `taskforge.config.json` and `.env` with your Jira, GitHub, and Anthropic credentials.
 
 ```bash
-npx taskforge init
+npx @taskforge-ai/cli init
 ```
 
 ---
 
-### `npx taskforge start`
+### `npx @taskforge-ai/cli start`
 
 Starts the polling agent worker. The agent watches Jira for tickets assigned to the configured agent user and processes them through the spec → approval → implementation flow.
 
 ```bash
-npx taskforge start [options]
+npx @taskforge-ai/cli start [options]
 ```
 
 | Option | Description | Default |
@@ -97,19 +97,19 @@ npx taskforge start [options]
 
 **Examples:**
 ```bash
-npx taskforge start
-npx taskforge start --path /my/project
-npx taskforge start --interval 60
+npx @taskforge-ai/cli start
+npx @taskforge-ai/cli start --path /my/project
+npx @taskforge-ai/cli start --interval 60
 ```
 
 ---
 
-### `npx taskforge run <ticketId>`
+### `npx @taskforge-ai/cli run <ticketId>`
 
 Processes a single ticket immediately without starting the polling loop. Useful for testing or re-running a specific ticket.
 
 ```bash
-npx taskforge run <ticketId> [options]
+npx @taskforge-ai/cli run <ticketId> [options]
 ```
 
 | Option | Description | Default |
@@ -120,30 +120,30 @@ npx taskforge run <ticketId> [options]
 
 **Examples:**
 ```bash
-npx taskforge run SCRUM-42
-npx taskforge run SCRUM-42 --dry-run
-npx taskforge run SCRUM-42 --path /my/project --debug
+npx @taskforge-ai/cli run SCRUM-42
+npx @taskforge-ai/cli run SCRUM-42 --dry-run
+npx @taskforge-ai/cli run SCRUM-42 --path /my/project --debug
 ```
 
 ---
 
-### `npx taskforge list`
+### `npx @taskforge-ai/cli list`
 
 Shows all Jira tickets currently assigned to the agent user, with their status.
 
 ```bash
-npx taskforge list
+npx @taskforge-ai/cli list
 ```
 
 ---
 
-### `npx taskforge mcp <action>`
+### `npx @taskforge-ai/cli mcp <action>`
 
 Controls the MCP (middleware) server. The MCP server is a local HTTP bridge between the agent and the Jira/GitHub APIs.
 
 ```bash
-npx taskforge mcp start [options]
-npx taskforge mcp stop
+npx @taskforge-ai/cli mcp start [options]
+npx @taskforge-ai/cli mcp stop
 ```
 
 | Option | Description | Default |
@@ -155,9 +155,9 @@ The server runs as a background daemon. Logs are written to `~/.taskforge/mcp.lo
 
 **Examples:**
 ```bash
-npx taskforge mcp start
-npx taskforge mcp start --port 3002
-npx taskforge mcp stop
+npx @taskforge-ai/cli mcp start
+npx @taskforge-ai/cli mcp start --port 3002
+npx @taskforge-ai/cli mcp stop
 ```
 
 ---

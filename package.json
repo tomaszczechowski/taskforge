@@ -14,7 +14,7 @@
     "build:cli": "pnpm --filter @taskforge-ai/cli build",
     "start:worker": "pnpm --filter @taskforge-ai/worker start",
     "start:mcp": "pnpm --filter @taskforge-ai/mcp-server start",
-    "publish": "pnpm --filter \"@taskforge-ai/*\" publish",
+    "publish:packages": "pnpm --filter \"@taskforge-ai/*\" publish",
     "format": "prettier --write \"apps/**/*.ts\" \"packages/**/*.ts\"",
     "format:check": "prettier --check \"apps/**/*.ts\" \"packages/**/*.ts\"",
     "lint": "eslint \"apps/**/*.ts\" \"packages/**/*.ts\"",

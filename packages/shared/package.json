@@ -4,6 +4,11 @@
     "description": "Shared types, ADF utilities, and logger used across the Taskforge monorepo.",
     "author": "Tomasz Czechowski <tomasz@czechowski.pl>",
     "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:tomaszczechowski/taskforge.git",
+        "directory": "packages/shared"
+    },
     "type": "module",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",

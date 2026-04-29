@@ -4,6 +4,11 @@
     "description": "HTTP middleware server exposing Jira and GitHub tools to the Taskforge agent worker.",
     "author": "Tomasz Czechowski <tomasz@czechowski.pl>",
     "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:tomaszczechowski/taskforge.git",
+        "directory": "apps/mcp-server"
+    },
     "type": "module",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",

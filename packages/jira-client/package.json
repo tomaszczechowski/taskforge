@@ -4,6 +4,11 @@
     "description": "Jira REST API v3 client for issue fetching, commenting, and workflow transitions used by the Taskforge agent.",
     "author": "Tomasz Czechowski <tomasz@czechowski.pl>",
     "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:tomaszczechowski/taskforge.git",
+        "directory": "packages/jira-client"
+    },
     "type": "module",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",

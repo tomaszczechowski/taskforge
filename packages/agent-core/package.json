@@ -4,6 +4,11 @@
     "description": "Claude API agentic loop for plan generation, spec summarisation, and code implementation with git operations.",
     "author": "Tomasz Czechowski <tomasz@czechowski.pl>",
     "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:tomaszczechowski/taskforge.git",
+        "directory": "packages/agent-core"
+    },
     "type": "module",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",

@@ -4,6 +4,11 @@
     "description": "GitHub API client for branch and pull request management used by the Taskforge agent.",
     "author": "Tomasz Czechowski <tomasz@czechowski.pl>",
     "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:tomaszczechowski/taskforge.git",
+        "directory": "packages/github-client"
+    },
     "type": "module",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",

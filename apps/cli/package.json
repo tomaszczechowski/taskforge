@@ -4,6 +4,11 @@
   "description": "AI agent that implements tickets from Jira, and more",
   "author": "Tomasz Czechowski <tomasz@czechowski.pl>",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tomaszczechowski/taskforge.git",
+    "directory": "apps/cli"
+  },
   "type": "module",
   "bin": {
     "taskforge": "./dist/index.js"

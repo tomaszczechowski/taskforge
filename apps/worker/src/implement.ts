@@ -77,7 +77,7 @@ export async function implement(issue: JiraIssue, config: TaskForgeConfigAgent) 
         base: process.env.GITHUB_REPO_MAIN_BRANCH || "main",
     });
 
-    logger.info(`[${key}] PR created:`, pr.data.html_url);
+    logger.info(`[${key}] 🚀 PR created: ${pr.data.html_url}`);
 
     await Promise.all([
         axios.post(`${MCP}/jira.addComment`, {
@@ -90,5 +90,5 @@ export async function implement(issue: JiraIssue, config: TaskForgeConfigAgent) 
         }),
     ]);
 
-    logger.info(`[${key}] Moved to REVIEW`);
+    logger.info(`[${key}] ↗️ Moved ticket to "IN REVIEW"`);
 }

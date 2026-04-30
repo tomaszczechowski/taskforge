@@ -19,6 +19,8 @@ import bodyParser from "body-parser";
 import { github } from "@taskforge-ai/github-client";
 import { jira } from "@taskforge-ai/jira-client";
 import { logger } from "@taskforge-ai/shared";
+import { resolve } from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
 app.use(bodyParser.json());
@@ -88,11 +90,8 @@ export function startMcpServer(port = parseInt(process.env.PORT ?? "3001", 10)):
     });
 }
 
-// ESM equivalent of `if (require.main === module)`
-import { resolve } from "path";
-import { fileURLToPath } from "url";
-
 const __filename = fileURLToPath(import.meta.url);
+
 if (resolve(process.argv[1]) === resolve(__filename)) {
     startMcpServer();
 }

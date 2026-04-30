@@ -5,6 +5,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ---
 
+## [0.1.4] - 2026-04-30
+
+### Changed
+
+- Moved `import { resolve }` and `import { fileURLToPath }` to the top of `src/index.ts` alongside other imports — they were previously placed after the `startMcpServer` function body
+- Removed stale inline comment `ESM equivalent of require.main === module`
+
+---
+
 ## [0.1.3] - 2026-04-30
 
 ### Changed
@@ -39,6 +48,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ---
 
+[0.1.4]: https://github.com/tomaszczechowski/taskforge/compare/@taskforge-ai/mcp-server@0.1.3...@taskforge-ai/mcp-server@0.1.4
+[0.1.3]: https://github.com/tomaszczechowski/taskforge/compare/@taskforge-ai/mcp-server@0.1.2...@taskforge-ai/mcp-server@0.1.3
 [0.1.2]: https://github.com/tomaszczechowski/taskforge/compare/@taskforge-ai/mcp-server@0.1.1...@taskforge-ai/mcp-server@0.1.2
 [0.1.1]: https://github.com/tomaszczechowski/taskforge/compare/@taskforge-ai/mcp-server@0.1.0...@taskforge-ai/mcp-server@0.1.1
 [0.1.0]: https://github.com/tomaszczechowski/taskforge/releases/tag/@taskforge-ai/mcp-server@0.1.0

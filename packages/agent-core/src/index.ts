@@ -19,7 +19,7 @@ import { execSync } from "child_process";
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
 import { checkoutBranch, commitAndPush, cleanupBranch } from "./git.js";
-import { extractText, logger, TaskForgeConfigAgent } from "@taskforge-ai/shared";
+import { extractText, JiraIssue, logger, TaskForgeConfigAgent } from "@taskforge-ai/shared";
 
 export * from "./git.js";
 
@@ -28,6 +28,7 @@ const client = new Anthropic();
 const PLAN_SYSTEM_PROMPT = `
     You are an expert software engineer.
     Analyze the given Jira issue and produce a concise implementation plan.
+    Verify comments and if the implementation is done already but need some change focus on changes only.
 
     You will be given the repository file tree and package.json. Use them to identify
     the exact file paths that need to change. Reference existing files where relevant,
@@ -160,12 +161,13 @@ function getRepoContext(repoPath: string): string {
  * @param config - Agent config supplying information about LLM model
  * @returns Parsed {@link Plan} object with steps, files to modify, and approach.
  */
-export async function generatePlan(issue: {
-    key: string;
-    fields: { summary: string; description: unknown };
-}, config: TaskForgeConfigAgent): Promise<Plan> {
+export async function generatePlan(issue: JiraIssue, config: TaskForgeConfigAgent): Promise<Plan> {
     const repoPath = process.env.LOCAL_REPO_PATH!;
     const repoContext = getRepoContext(repoPath);
+
+    const commentsText = issue.fields.comment.comments
+        .map((c, i) => `[${i + 1}] ${extractText(c.body)}`)
+        .join("\n\n");
 
     const stream = client.messages.stream({
         model: config.llmModel.implementation,
@@ -178,7 +180,8 @@ export async function generatePlan(issue: {
                 role: "user",
                 content: `Issue: ${issue.key}
                     Summary: ${issue.fields.summary}
-                    Description: ${extractText(issue.fields.description) || "(no description)"}`,
+                    Description: ${extractText(issue.fields.description) || "(no description)"}
+                    Discussion thread: ${commentsText || "(no comments yet)"}`,
             },
         ],
     });

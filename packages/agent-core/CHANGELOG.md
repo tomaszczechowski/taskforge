@@ -5,6 +5,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ---
 
+## [0.1.4] - 2026-04-30
+
+### Changed
+
+- `generatePlan` parameter type tightened from an inline object to `JiraIssue` (imported from `@taskforge-ai/shared`)
+- Jira comment thread is now extracted and appended to the plan prompt as a numbered discussion thread so the agent sees prior conversation context
+- System prompt updated to instruct the agent to focus only on remaining changes when an implementation is already partially in place
+
+---
+
 ## [0.1.3] - 2026-04-30
 
 ### Changed
@@ -40,6 +50,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ---
 
+[0.1.4]: https://github.com/tomaszczechowski/taskforge/compare/@taskforge-ai/agent-core@0.1.3...@taskforge-ai/agent-core@0.1.4
+[0.1.3]: https://github.com/tomaszczechowski/taskforge/compare/@taskforge-ai/agent-core@0.1.2...@taskforge-ai/agent-core@0.1.3
 [0.1.2]: https://github.com/tomaszczechowski/taskforge/compare/@taskforge-ai/agent-core@0.1.1...@taskforge-ai/agent-core@0.1.2
 [0.1.1]: https://github.com/tomaszczechowski/taskforge/compare/@taskforge-ai/agent-core@0.1.0...@taskforge-ai/agent-core@0.1.1
 [0.1.0]: https://github.com/tomaszczechowski/taskforge/releases/tag/@taskforge-ai/agent-core@0.1.0

@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img src="jira.png" alt="Jira integration" width="70%" />
+  <img src="jira.webp" alt="Jira integration" width="70%" />
 </p>
 
 ---

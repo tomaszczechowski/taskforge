@@ -37,6 +37,20 @@ The agent polls Jira on a configurable interval. Every step goes through a human
 
 ---
 
+## Packages
+
+| Package | Version | Description |
+|---|---|---|
+| [`@taskforge-ai/cli`](https://www.npmjs.com/package/@taskforge-ai/cli) | ![npm](https://img.shields.io/npm/v/@taskforge-ai/cli?style=flat-square&color=9F7AEA) | CLI entry point — `init`, `start`, `run`, `list`, `mcp` commands |
+| [`@taskforge-ai/worker`](https://www.npmjs.com/package/@taskforge-ai/worker) | ![npm](https://img.shields.io/npm/v/@taskforge-ai/worker?style=flat-square&color=9F7AEA) | Polling worker that drives the spec → approval → implementation FSM |
+| [`@taskforge-ai/mcp-server`](https://www.npmjs.com/package/@taskforge-ai/mcp-server) | ![npm](https://img.shields.io/npm/v/@taskforge-ai/mcp-server?style=flat-square&color=9F7AEA) | Local HTTP bridge exposing Jira and GitHub tools to the agent |
+| [`@taskforge-ai/agent-core`](https://www.npmjs.com/package/@taskforge-ai/agent-core) | ![npm](https://img.shields.io/npm/v/@taskforge-ai/agent-core?style=flat-square&color=9F7AEA) | Anthropic SDK agentic loop — plan generation, spec summarisation, code implementation |
+| [`@taskforge-ai/jira-client`](https://www.npmjs.com/package/@taskforge-ai/jira-client) | ![npm](https://img.shields.io/npm/v/@taskforge-ai/jira-client?style=flat-square&color=9F7AEA) | Jira REST API v3 client — issue fetching, commenting, workflow transitions |
+| [`@taskforge-ai/github-client`](https://www.npmjs.com/package/@taskforge-ai/github-client) | ![npm](https://img.shields.io/npm/v/@taskforge-ai/github-client?style=flat-square&color=9F7AEA) | GitHub API client — branch and pull request management |
+| [`@taskforge-ai/shared`](https://www.npmjs.com/package/@taskforge-ai/shared) | ![npm](https://img.shields.io/npm/v/@taskforge-ai/shared?style=flat-square&color=9F7AEA) | Shared types, ADF utilities, and logger used across the monorepo |
+
+---
+
 ## Installation
 
 Install globally from npm:
@@ -50,20 +64,6 @@ Or run any command without installing via `npx`:
 ```bash
 npx @taskforge-ai/cli <command>
 ```
-
----
-
-## Packages
-
-| Package | Version | Description |
-|---|---|---|
-| [`@taskforge-ai/cli`](https://www.npmjs.com/package/@taskforge-ai/cli) | ![npm](https://img.shields.io/npm/v/@taskforge-ai/cli?style=flat-square&color=9F7AEA) | CLI entry point — `init`, `start`, `run`, `list`, `mcp` commands |
-| [`@taskforge-ai/worker`](https://www.npmjs.com/package/@taskforge-ai/worker) | ![npm](https://img.shields.io/npm/v/@taskforge-ai/worker?style=flat-square&color=9F7AEA) | Polling worker that drives the spec → approval → implementation FSM |
-| [`@taskforge-ai/mcp-server`](https://www.npmjs.com/package/@taskforge-ai/mcp-server) | ![npm](https://img.shields.io/npm/v/@taskforge-ai/mcp-server?style=flat-square&color=9F7AEA) | Local HTTP bridge exposing Jira and GitHub tools to the agent |
-| [`@taskforge-ai/agent-core`](https://www.npmjs.com/package/@taskforge-ai/agent-core) | ![npm](https://img.shields.io/npm/v/@taskforge-ai/agent-core?style=flat-square&color=9F7AEA) | Anthropic SDK agentic loop — plan generation, spec summarisation, code implementation |
-| [`@taskforge-ai/jira-client`](https://www.npmjs.com/package/@taskforge-ai/jira-client) | ![npm](https://img.shields.io/npm/v/@taskforge-ai/jira-client?style=flat-square&color=9F7AEA) | Jira REST API v3 client — issue fetching, commenting, workflow transitions |
-| [`@taskforge-ai/github-client`](https://www.npmjs.com/package/@taskforge-ai/github-client) | ![npm](https://img.shields.io/npm/v/@taskforge-ai/github-client?style=flat-square&color=9F7AEA) | GitHub API client — branch and pull request management |
-| [`@taskforge-ai/shared`](https://www.npmjs.com/package/@taskforge-ai/shared) | ![npm](https://img.shields.io/npm/v/@taskforge-ai/shared?style=flat-square&color=9F7AEA) | Shared types, ADF utilities, and logger used across the monorepo |
 
 ---
 

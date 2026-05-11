@@ -10,7 +10,9 @@
   <img src="demo.gif" alt="Taskforge CLI demo" width="80%" />
 </p>
 
-### Example of communication in JIRA between a human and an AI agent
+<div style="text-align: center;font-size:16px;font-weight:600;padding: 20px 0;">
+Example of communication in JIRA between a human and an AI agent
+</div>
 
 <p align="center">
   <img src="jira.webp" alt="Jira integration" width="70%" />
